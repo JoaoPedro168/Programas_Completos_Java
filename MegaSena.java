@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//Programa que simula uma rodada da Mega sena, 
+//você escolhe 6 numeros e compara com seis numeros selecionados pelo computador 
 public class MegaSena {
     public static void main(String[] args) throws Exception {
         ArrayList<Integer> picks = new ArrayList<>();
