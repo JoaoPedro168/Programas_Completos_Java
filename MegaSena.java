@@ -2,6 +2,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+//Uma simulação de um jogo da mega sena
+//Voce escolhe seis numeros e em seguida compara com os numeros
+//selecionados pela maquina/lotérica
+
 public class MegaSena {
     public static void main(String[] args) throws Exception {
         ArrayList<Integer> picks = new ArrayList<>();
