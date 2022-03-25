@@ -1,8 +1,7 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
-//Programa que simula uma rodada da Mega sena, 
-//você escolhe 6 numeros e compara com seis numeros selecionados pelo computador 
 public class MegaSena {
     public static void main(String[] args) throws Exception {
         ArrayList<Integer> picks = new ArrayList<>();
@@ -28,11 +27,26 @@ public class MegaSena {
                 numeros.add(numero);
             }
 
+            System.out.println("");
             System.out.println("Estes são os numeros que você jogou");
-            System.out.println(numeros);
-            numeros.clear();
+            Collections.sort(numeros);
+            System.out.println(numeros + "\n");
+
             System.out.println("Este é são os numeros selecionados pela loterica");
-            System.out.println(picks);
+            Collections.sort(picks);
+            System.out.println(picks+"\n");
+
+            int acertos = 0;
+            for(Integer i:picks){
+                if(numeros.contains(i)){
+                    acertos++;
+                }
+            }
+
+            System.out.println("Voce acertou " + acertos + " numeros" + "\n");
+            acertos=0;
+           
+            numeros.clear();
             picks.clear();
 
             System.out.println("Quer jogar de novo: Sim ou Nao");
